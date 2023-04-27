@@ -5,20 +5,20 @@
 class LogTotal < Formula
   desc ""
   homepage ""
-  version "0.1.2"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/n4rvs3/log_total/releases/download/v0.1.2/log_total_0.1.2_Darwin_64bit.tar.gz"
-      sha256 "24cc589ab02a254705a35787690f665b6e9e7bb3570f6daa7c6944e9d96d971e"
+      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.0/log_total_0.2.0_Darwin_64bit.tar.gz"
+      sha256 "815f6d93a68e7396a0e4af1add29c5c404038d8349edb711fc5ebe458cb4fa49"
 
       def install
         bin.install "log_total"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/n4rvs3/log_total/releases/download/v0.1.2/log_total_0.1.2_Darwin_ARM64.tar.gz"
-      sha256 "e3beb251a1d2b14162326d57833ce639fa701effa6b45258beae898623e3b3c8"
+      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.0/log_total_0.2.0_Darwin_ARM64.tar.gz"
+      sha256 "53f4a233094b5171f02085cf54886ccc1adafcdca56b864005b2886c1c760a6a"
 
       def install
         bin.install "log_total"
@@ -27,17 +27,17 @@ class LogTotal < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/n4rvs3/log_total/releases/download/v0.1.2/log_total_0.1.2_Linux_ARM64.tar.gz"
-      sha256 "5fe35e9cfe2ecc21cd6e7b79f468106f3f0c1f52f003c83531db66953b5bcdec"
+    if Hardware::CPU.intel?
+      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.0/log_total_0.2.0_Linux_64bit.tar.gz"
+      sha256 "f15ddd0181d55d94084df527d6c3c3074e7b7881f54a3f06d366eefbfc9569f9"
 
       def install
         bin.install "log_total"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/n4rvs3/log_total/releases/download/v0.1.2/log_total_0.1.2_Linux_64bit.tar.gz"
-      sha256 "92062eb08823d63ac1c21b4e0c746c41633c1349cd4aef90481793c2bcb7c7d1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.0/log_total_0.2.0_Linux_ARM64.tar.gz"
+      sha256 "d4124a9b7f5161dcf0f5eecc311cefa527c83ff9bcb20348091b43666a640f2c"
 
       def install
         bin.install "log_total"
