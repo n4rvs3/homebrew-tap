@@ -5,20 +5,20 @@
 class LogTotal < Formula
   desc ""
   homepage ""
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.0/log_total_0.2.0_Darwin_64bit.tar.gz"
-      sha256 "815f6d93a68e7396a0e4af1add29c5c404038d8349edb711fc5ebe458cb4fa49"
+      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.1/log_total_0.2.1_Darwin_64bit.tar.gz"
+      sha256 "27e4149336a07c863c50453599ca1da7f96bde044afa74ee4b6718fa4533b18d"
 
       def install
         bin.install "log_total"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.0/log_total_0.2.0_Darwin_ARM64.tar.gz"
-      sha256 "53f4a233094b5171f02085cf54886ccc1adafcdca56b864005b2886c1c760a6a"
+      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.1/log_total_0.2.1_Darwin_ARM64.tar.gz"
+      sha256 "ce691af8ba330ffc9fcbd23f8d16597819c2fe28e0f4dbcbb67f81dcb7b865fe"
 
       def install
         bin.install "log_total"
@@ -28,16 +28,16 @@ class LogTotal < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.0/log_total_0.2.0_Linux_64bit.tar.gz"
-      sha256 "f15ddd0181d55d94084df527d6c3c3074e7b7881f54a3f06d366eefbfc9569f9"
+      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.1/log_total_0.2.1_Linux_64bit.tar.gz"
+      sha256 "cb80c5507ce6debb3c5b328bae6f93ffce4c8584c1fea6676200fdea58d7e074"
 
       def install
         bin.install "log_total"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.0/log_total_0.2.0_Linux_ARM64.tar.gz"
-      sha256 "d4124a9b7f5161dcf0f5eecc311cefa527c83ff9bcb20348091b43666a640f2c"
+      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.1/log_total_0.2.1_Linux_ARM64.tar.gz"
+      sha256 "3d25536405c18daa7d5ab58f3193977c6f06ddd2bf5d7600a22e1ea7c77fee65"
 
       def install
         bin.install "log_total"
