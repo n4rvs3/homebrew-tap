@@ -5,20 +5,20 @@
 class LogTotal < Formula
   desc ""
   homepage ""
-  version "0.2.1"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.1/log_total_0.2.1_Darwin_64bit.tar.gz"
-      sha256 "27e4149336a07c863c50453599ca1da7f96bde044afa74ee4b6718fa4533b18d"
+    if Hardware::CPU.arm?
+      url "https://github.com/n4rvs3/log_total/releases/download/v0.3.0/log_total_0.3.0_Darwin_ARM64.tar.gz"
+      sha256 "7686a3166ea1c8a74d5cafd8a2774fba8e6323644219b7b1208d0d224b3885ae"
 
       def install
         bin.install "log_total"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.1/log_total_0.2.1_Darwin_ARM64.tar.gz"
-      sha256 "ce691af8ba330ffc9fcbd23f8d16597819c2fe28e0f4dbcbb67f81dcb7b865fe"
+    if Hardware::CPU.intel?
+      url "https://github.com/n4rvs3/log_total/releases/download/v0.3.0/log_total_0.3.0_Darwin_64bit.tar.gz"
+      sha256 "2e70d68e49d4add73a66ea55211ef180417d5f30a8cdb079e75d53975e6d4a6e"
 
       def install
         bin.install "log_total"
@@ -28,16 +28,16 @@ class LogTotal < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.1/log_total_0.2.1_Linux_64bit.tar.gz"
-      sha256 "cb80c5507ce6debb3c5b328bae6f93ffce4c8584c1fea6676200fdea58d7e074"
+      url "https://github.com/n4rvs3/log_total/releases/download/v0.3.0/log_total_0.3.0_Linux_64bit.tar.gz"
+      sha256 "89a1ff0c4150b71044c6037d61588184465d6e5dc2368ae29135002a235c3b6e"
 
       def install
         bin.install "log_total"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/n4rvs3/log_total/releases/download/v0.2.1/log_total_0.2.1_Linux_ARM64.tar.gz"
-      sha256 "3d25536405c18daa7d5ab58f3193977c6f06ddd2bf5d7600a22e1ea7c77fee65"
+      url "https://github.com/n4rvs3/log_total/releases/download/v0.3.0/log_total_0.3.0_Linux_ARM64.tar.gz"
+      sha256 "ae989a4452189c2363ea511f452d0ba71c0f7d51989d6e5c180e650ce861bae2"
 
       def install
         bin.install "log_total"
